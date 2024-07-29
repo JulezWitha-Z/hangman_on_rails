@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CodespacesTryRails</title>
+    <title>Hangperson</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
     <%= hotwire_livereload_tags if Rails.env.development? %>
   </head>
-
   <body>
-    <%= yield %>
+    <div class="jumbotron">
+      <h1 class="display-4">Play Hangperson!</h1>
+      <p class="lead">Random word generator provided by Watchout4snakes.com</p>
+    </div>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
